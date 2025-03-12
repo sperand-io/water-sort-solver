@@ -1,0 +1,49 @@
+{
+  "name": "water-sort-solver",
+  "version": "0.1.0",
+  "description": "Sudoku.com Water Sort Puzzle Solver with Claude integration",
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "dev:client": "vite",
+    "build": "tsup && vite build",
+    "build:client": "vite build",
+    "preview:client": "vite preview",
+    "deploy": "vite build && wrangler deploy"
+  },
+  "keywords": ["puzzle", "solver", "BFS", "claude", "sudoku"],
+  "author": "Chris Sperandio",
+  "license": "MIT",
+  "packageManager": "pnpm@10.4.1+sha512.c753b6c3ad7afa13af388fa6d808035a008e30ea9993f58c6663e2bc5ff21679aa834db094987129aa4d488b86df57f7b634981b2f827cdcacc698cc0cfb88af",
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.39.0",
+    "@hono/zod-validator": "^0.4.3",
+    "@tanstack/react-router": "^1.114.17",
+    "hono": "^4.7.4",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20250311.0",
+    "@tailwindcss/vite": "^4.0.13",
+    "@types/react": "^19.0.10",
+    "@types/react-dom": "^19.0.4",
+    "@typescript-eslint/eslint-plugin": "^8.26.1",
+    "@typescript-eslint/parser": "^8.26.1",
+    "@vitejs/plugin-react": "^4.3.4",
+    "tailwindcss": "^4.0.13",
+    "tsup": "^8.4.0",
+    "typescript": "^5.8.2",
+    "vite": "^6.2.1",
+    "vite-plugin-wasm-pack": "^0.1.12",
+    "wrangler": "^3.114.1"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild",
+      "sharp",
+      "workerd"
+    ]
+  }
+}

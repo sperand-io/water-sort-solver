@@ -1,0 +1,35 @@
+{
+  "name": "water-sort-solver",
+  "main": "src/index.ts",
+  "compatibility_date": "2025-03-12",
+  "compatibility_flags": ["nodejs_compat"],
+  "workers_dev": false,
+  "assets": {
+    "directory": "./dist/client",
+    "binding": "ASSETS"
+  },
+  "build": {
+    "command": "npm run build:client"
+  },
+  
+  "env": {
+    "production": {
+      "vars": {
+        "ENVIRONMENT": "production"
+      },
+      "routes": [
+        {
+          "pattern": "water.sperand.io",
+          "custom_domain": true
+        }
+      ]
+    },
+    "development": {
+      "vars": {
+        "ENVIRONMENT": "development"
+      }
+    }
+    // Claude API keys will be stored as secrets in env.stage and env.prod
+    // They won't appear in the wrangler file
+  }
+}
